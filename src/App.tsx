@@ -6,11 +6,15 @@ import {
   Button,
   sum,
 } from "chnirt-tw-ui";
+import Theme from "./pages/Theme";
 // import Button from './stories/Button'
 
 function App() {
   const [count, setCount] = useState(0);
   const total = useMemo(() => sum(5, count), [count]);
+
+  return <Theme />
+
   return (
     <div className="App">
       <div>
@@ -35,6 +39,8 @@ function App() {
       </p>
       {total}
       <Button primary={true} label={"Button"} size={"small"} />
+
+
     </div>
   );
 }
