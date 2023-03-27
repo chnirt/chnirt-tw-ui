@@ -21,6 +21,7 @@ specifiers:
   typescript: ^4.9.3
   vite: ^4.2.0
   vite-plugin-dts: ^2.1.0
+  vite-plugin-libcss: ^1.0.6
 
 dependencies:
   chnirt-tw-ui: 'link:'
@@ -45,6 +46,7 @@ devDependencies:
   typescript: 4.9.5
   vite: 4.2.1_@types+node@18.15.10
   vite-plugin-dts: 2.1.0_brxbe67fk4pmqkqs3ovfr54v2i
+  vite-plugin-libcss: 1.0.6_vite@4.2.1
 
 packages:
 
@@ -6978,6 +6980,14 @@ packages:
       - '@types/node'
       - rollup
       - supports-color
+    dev: true
+
+  /vite-plugin-libcss/1.0.6_vite@4.2.1:
+    resolution: {integrity: sha512-DUkVPiNEPFRpshhsqek9b/vPH4piytTsrlyRdl84ns4NlR7PJNSmjtDvyBytrL7E+jsrXD5iCEzBOtrChX45CA==}
+    peerDependencies:
+      vite: '*'
+    dependencies:
+      vite: 4.2.1_@types+node@18.15.10
     dev: true
 
   /vite/4.2.1_@types+node@18.15.10:
