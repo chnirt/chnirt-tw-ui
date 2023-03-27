@@ -1,4 +1,73 @@
-:root {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 141, 123, 104;
+    --color-text-base: 0, 0, 0;
+  }
+  .theme-1 {
+    --color-primary: 164, 144, 124;
+    --color-text-base: 0, 0, 0;
+  }
+  .theme-2 {
+    --color-primary: 200, 182, 166;
+    --color-text-base: 0, 0, 0;
+  }
+  h1 {
+    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+  }
+  h2 {
+    @apply mt-10 scroll-m-20 border-b border-b-slate-200 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 dark:border-b-slate-700;
+  }
+  h3 {
+    @apply mt-8 scroll-m-20 text-2xl font-semibold tracking-tight;
+  }
+  h4 {
+    @apply mt-8 scroll-m-20 text-xl font-semibold tracking-tight;
+  }
+  p {
+    @apply leading-7 [&:not(:first-child)]:mt-6;
+  }
+  blockquote {
+    @apply mt-6 border-l-2 border-slate-300 pl-6 italic text-slate-800 dark:border-slate-600 dark:text-slate-200;
+  }
+  code {
+    @apply relative rounded bg-slate-100 py-[0.2rem] px-[0.3rem] font-mono text-sm font-semibold text-slate-900 dark:bg-slate-800 dark:text-slate-400;
+  }
+  .lead {
+    @apply text-xl text-slate-700 dark:text-slate-400;
+  }
+  .large {
+    @apply text-lg font-semibold text-slate-900 dark:text-slate-50;
+  }
+  small {
+    @apply text-sm font-medium leading-none;
+  }
+  .subtitle {
+    @apply text-sm text-slate-500 dark:text-slate-400;
+  }
+
+  body {
+    @apply bg-white dark:bg-black;
+  }
+}
+@layer components {
+  .btn-chin {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  }
+}
+@layer utilities {
+  .filter-none {
+    filter: none;
+  }
+  .filter-grayscale {
+    filter: grayscale(100%);
+  }
+}
+
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -66,4 +135,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
