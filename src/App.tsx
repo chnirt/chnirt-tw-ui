@@ -1,13 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-// import { sum } from 'chnirt-tw-ui'
+import { useMemo, useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import {
+  Button,
+  sum,
+} from "chnirt-tw-ui";
+// import Button from './stories/Button'
 
 function App() {
-  const [count, setCount] = useState(0)
-  // const total = sum(5, 6)
-
+  const [count, setCount] = useState(0);
+  const total = useMemo(() => sum(5, count), [count]);
   return (
     <div className="App">
       <div>
@@ -30,9 +33,10 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      {/* {total} */}
+      {total}
+      <Button primary={true} label={"Button"} size={"small"} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
