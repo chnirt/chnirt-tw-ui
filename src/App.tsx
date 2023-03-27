@@ -2,9 +2,11 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+// import { sum } from 'chnirt-tw-ui'
 
 function App() {
   const [count, setCount] = useState(0)
+  // const total = sum(5, 6)
 
   return (
     <div className="App">
@@ -28,6 +30,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      {/* {total} */}
     </div>
   )
 }
