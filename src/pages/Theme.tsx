@@ -2,7 +2,6 @@ import clsx from "clsx";
 import { useCallback, useEffect } from "react";
 import { useDarkMode, useLocalStorage } from "usehooks-ts";
 
-const id = "theme";
 const Theme = () => {
   const { isDarkMode, toggle, enable, disable } = useDarkMode(false);
   const [myTheme, setMyTheme] = useLocalStorage<string | null>("myTheme", null);
@@ -27,14 +26,14 @@ const Theme = () => {
 
   useEffect(() => {
     if (myTheme) {
-      document.getElementById("theme")?.setAttribute("class", myTheme);
+      document.body.setAttribute("class", myTheme);
     } else {
-      document.getElementById("theme")?.removeAttribute("class");
+      document.body.removeAttribute("class");
     }
   }, [myTheme]);
 
   return (
-    <div className={clsx("bg-white dark:bg-black", myTheme)}>
+    <div className={clsx("bg-white dark:bg-black")}>
       Theme
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <button className="text-black dark:text-white" onClick={toggle}>
